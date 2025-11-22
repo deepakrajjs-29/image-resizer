@@ -21,7 +21,6 @@
             background: #0a0a0a;
         }
 
-        /* Animated Background */
         .animated-background {
             position: fixed;
             top: 0;
@@ -33,7 +32,6 @@
             background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
         }
 
-        /* Solar System */
         .solar-system {
             position: absolute;
             top: 50%;
@@ -77,7 +75,6 @@
             }
         }
 
-        /* Orbit paths */
         .orbit {
             position: absolute;
             top: 50%;
@@ -93,7 +90,6 @@
         .orbit-4 { width: 560px; height: 560px; }
         .orbit-5 { width: 720px; height: 720px; }
 
-        /* Planets */
         .planet {
             position: absolute;
             border-radius: 50%;
@@ -104,9 +100,6 @@
             width: 12px;
             height: 12px;
             background: #8c7853;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
             animation: orbit1 8s linear infinite;
         }
 
@@ -114,9 +107,6 @@
             width: 18px;
             height: 18px;
             background: #ffc649;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
             animation: orbit2 12s linear infinite;
         }
 
@@ -124,9 +114,6 @@
             width: 20px;
             height: 20px;
             background: linear-gradient(135deg, #1e90ff, #00bfff);
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
             animation: orbit3 16s linear infinite;
             box-shadow: 0 0 30px #1e90ff;
         }
@@ -135,9 +122,6 @@
             width: 16px;
             height: 16px;
             background: #cd5c5c;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
             animation: orbit4 20s linear infinite;
         }
 
@@ -145,39 +129,55 @@
             width: 35px;
             height: 35px;
             background: linear-gradient(135deg, #c88b3a, #b87333);
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
             animation: orbit5 26s linear infinite;
             box-shadow: 0 0 40px #c88b3a;
         }
 
         @keyframes orbit1 {
-            from { transform: translateX(-50%) rotate(0deg) translateX(100px) rotate(0deg); }
-            to { transform: translateX(-50%) rotate(360deg) translateX(100px) rotate(-360deg); }
+            from { 
+                transform: rotate(0deg) translateX(100px) rotate(0deg); 
+            }
+            to { 
+                transform: rotate(360deg) translateX(100px) rotate(-360deg); 
+            }
         }
 
         @keyframes orbit2 {
-            from { transform: translateX(-50%) rotate(0deg) translateX(150px) rotate(0deg); }
-            to { transform: translateX(-50%) rotate(360deg) translateX(150px) rotate(-360deg); }
+            from { 
+                transform: rotate(0deg) translateX(150px) rotate(0deg); 
+            }
+            to { 
+                transform: rotate(360deg) translateX(150px) rotate(-360deg); 
+            }
         }
 
         @keyframes orbit3 {
-            from { transform: translateX(-50%) rotate(0deg) translateX(210px) rotate(0deg); }
-            to { transform: translateX(-50%) rotate(360deg) translateX(210px) rotate(-360deg); }
+            from { 
+                transform: rotate(0deg) translateX(210px) rotate(0deg); 
+            }
+            to { 
+                transform: rotate(360deg) translateX(210px) rotate(-360deg); 
+            }
         }
 
         @keyframes orbit4 {
-            from { transform: translateX(-50%) rotate(0deg) translateX(280px) rotate(0deg); }
-            to { transform: translateX(-50%) rotate(360deg) translateX(280px) rotate(-360deg); }
+            from { 
+                transform: rotate(0deg) translateX(280px) rotate(0deg); 
+            }
+            to { 
+                transform: rotate(360deg) translateX(280px) rotate(-360deg); 
+            }
         }
 
         @keyframes orbit5 {
-            from { transform: translateX(-50%) rotate(0deg) translateX(360px) rotate(0deg); }
-            to { transform: translateX(-50%) rotate(360deg) translateX(360px) rotate(-360deg); }
+            from { 
+                transform: rotate(0deg) translateX(360px) rotate(0deg); 
+            }
+            to { 
+                transform: rotate(360deg) translateX(360px) rotate(-360deg); 
+            }
         }
 
-        /* Stars */
         .stars {
             position: absolute;
             top: 0;
@@ -200,7 +200,6 @@
             50% { opacity: 1; }
         }
 
-        /* Floating orbs */
         .orb {
             position: absolute;
             border-radius: 50%;
@@ -248,7 +247,6 @@
             }
         }
 
-        /* Animated grid */
         .grid-overlay {
             position: absolute;
             top: 0;
@@ -272,7 +270,6 @@
             }
         }
 
-        /* Shooting stars */
         .shooting-star {
             position: absolute;
             width: 2px;
@@ -294,7 +291,6 @@
             }
         }
 
-        /* Floating particles */
         .particle {
             position: absolute;
             width: 3px;
@@ -315,7 +311,6 @@
             }
         }
 
-        /* Content container */
         .container {
             position: relative;
             z-index: 10;
@@ -324,7 +319,6 @@
             padding: 40px 20px;
         }
 
-        /* Header with glow effect */
         .header {
             text-align: center;
             margin-bottom: 40px;
@@ -370,7 +364,6 @@
             font-weight: 300;
         }
 
-        /* Card with glassmorphism */
         .card {
             background: rgba(26, 10, 46, 0.4);
             backdrop-filter: blur(20px);
@@ -394,7 +387,6 @@
             }
         }
 
-        /* Upload area */
         .upload-area {
             border: 3px dashed rgba(138, 43, 226, 0.5);
             border-radius: 16px;
@@ -405,6 +397,7 @@
             margin-bottom: 30px;
             position: relative;
             overflow: hidden;
+            cursor: pointer;
         }
 
         .upload-area::before {
@@ -445,6 +438,8 @@
             margin-bottom: 15px;
             animation: float 3s ease-in-out infinite;
             color: #8a2be2;
+            position: relative;
+            z-index: 1;
         }
 
         @keyframes float {
@@ -461,17 +456,20 @@
             color: white;
             margin-bottom: 10px;
             font-weight: 600;
+            position: relative;
+            z-index: 1;
         }
 
         .upload-hint {
             color: rgba(255, 255, 255, 0.6);
+            position: relative;
+            z-index: 1;
         }
 
         #fileInput {
             display: none;
         }
 
-        /* Preview section */
         .preview-section {
             display: none;
         }
@@ -497,7 +495,6 @@
             box-shadow: 0 10px 40px rgba(138, 43, 226, 0.4);
         }
 
-        /* Stats */
         .stats {
             display: flex;
             justify-content: space-around;
@@ -528,7 +525,6 @@
             font-weight: 700;
         }
 
-        /* Controls */
         .controls-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -574,15 +570,23 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(138, 43, 226, 0.2);
         }
 
         .checkbox-group input[type="checkbox"] {
-            width: auto;
-            height: 20px;
             width: 20px;
+            height: 20px;
+            cursor: pointer;
         }
 
-        /* Buttons */
+        .checkbox-group label {
+            cursor: pointer;
+            margin-bottom: 0;
+        }
+
         .button-group {
             display: flex;
             gap: 15px;
@@ -604,6 +608,7 @@
             box-shadow: 0 8px 30px rgba(138, 43, 226, 0.4);
             position: relative;
             overflow: hidden;
+            cursor: pointer;
         }
 
         button::before {
@@ -672,8 +677,7 @@
     </style>
 </head>
 <body>
-<div class="animated-background">
-        <!-- Solar System -->
+    <div class="animated-background">
         <div class="solar-system">
             <div class="sun"></div>
             <div class="orbit orbit-1"></div>
@@ -687,10 +691,7 @@
             <div class="planet mars"></div>
             <div class="planet jupiter"></div>
         </div>
-
-        <!-- Stars -->
         <div class="stars" id="stars"></div>
-
         <div class="orb orb-1"></div>
         <div class="orb orb-2"></div>
         <div class="orb orb-3"></div>
@@ -763,11 +764,9 @@
                     </div>
                 </div>
 
-                <div class="control-group">
-                    <div class="checkbox-group">
-                        <input type="checkbox" id="maintainAspect" checked>
-                        <label for="maintainAspect">Maintain aspect ratio</label>
-                    </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="maintainAspect" checked>
+                    <label for="maintainAspect">Maintain aspect ratio</label>
                 </div>
 
                 <div class="button-group">
@@ -892,6 +891,7 @@
                     
                     document.getElementById('widthInput').value = originalWidth;
                     document.getElementById('heightInput').value = originalHeight;
+                    document.getElementById('scaleInput').value = 100;
                     
                     previewSection.classList.add('active');
                     document.getElementById('resultSection').style.display = 'none';
@@ -906,6 +906,7 @@
                 const ratio = originalHeight / originalWidth;
                 document.getElementById('heightInput').value = Math.round(this.value * ratio);
             }
+            updateScaleFromDimensions();
         });
 
         document.getElementById('heightInput').addEventListener('input', function() {
@@ -913,61 +914,10 @@
                 const ratio = originalWidth / originalHeight;
                 document.getElementById('widthInput').value = Math.round(this.value * ratio);
             }
+            updateScaleFromDimensions();
         });
 
         document.getElementById('scaleInput').addEventListener('input', function() {
-            const scale = this.value / 100;
-            document.getElementById('widthInput').value = Math.round(originalWidth * scale);
-            document.getElementById('heightInput').value = Math.round(originalHeight * scale);
-        });
-
-        function resizeImage() {
-            const newWidth = parseInt(document.getElementById('widthInput').value);
-            const newHeight = parseInt(document.getElementById('heightInput').value);
-            const quality = parseFloat(document.getElementById('qualitySelect').value);
-
-            if (!newWidth || !newHeight) {
-                alert('Please enter valid dimensions');
-                return;
-            }
-
-            const canvas = document.createElement('canvas');
-            canvas.width = newWidth;
-            canvas.height = newHeight;
-            
-            const ctx = canvas.getContext('2d');
-            ctx.drawImage(originalImage, 0, 0, newWidth, newHeight);
-            
-            resizedDataUrl = canvas.toDataURL('image/jpeg', quality);
-            
-            document.getElementById('resultImg').src = resizedDataUrl;
-            document.getElementById('newWidth').textContent = newWidth + 'px';
-            document.getElementById('newHeight').textContent = newHeight + 'px';
-            
-            const base64Length = resizedDataUrl.length - 'data:image/jpeg;base64,'.length;
-            const sizeInBytes = (base64Length * 3) / 4;
-            document.getElementById('newSize').textContent = formatFileSize(sizeInBytes);
-            
-            document.getElementById('resultSection').style.display = 'block';
-            document.getElementById('resultSection').scrollIntoView({ behavior: 'smooth' });
-        }
-
-        function downloadImage() {
-            const link = document.createElement('a');
-            link.download = 'resized-image.jpg';
-            link.href = resizedDataUrl;
-            link.click();
-        }
-
-        function reset() {
-            previewSection.classList.remove('active');
-            fileInput.value = '';
-            originalImage = null;
-            document.getElementById('resultSection').style.display = 'none';
-        }
-
-        function formatFileSize(bytes) {
-            if (bytes < 1024) return bytes + ' B';
-            if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
-            return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
-        }
+            if (originalWidth > 0 && originalHeight > 0) {
+                const scale = this.value / 100;
+                document.getElementById('widthInput').value = Math.round(original
