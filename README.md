@@ -18,7 +18,6 @@
 
 </div> 
 
-
 ## 🌟 Overview
 
 **Cosmic Image Resizer** is not just another image resizing tool—it's an immersive experience that combines powerful functionality with breathtaking visual design. Watch planets orbit, stars twinkle, and shooting stars streak across the cosmos while you resize your images with precision.
